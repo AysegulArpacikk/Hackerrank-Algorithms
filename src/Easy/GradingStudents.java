@@ -15,7 +15,6 @@ class Result9 {
      */
 
     public static List<Integer> gradingStudents(List<Integer> grades) {
-
         for(int i=0; i<grades.size(); i++) {
             if((grades.get(i) + 1) % 5 == 0 && grades.get(i) + 1 >= 40) {
                 grades.set(i, grades.get(i) + 1);
@@ -28,7 +27,6 @@ class Result9 {
         System.out.println(grades);
 
         return grades;
-
     }
 
 }

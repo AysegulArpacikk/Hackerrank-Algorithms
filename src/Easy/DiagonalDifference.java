@@ -15,8 +15,6 @@ class Result3 {
      */
 
     public static int diagonalDifference(int[][] flat) {
-        // Write your code here
-
         int minus1 = 0;
         int minus2 = 0;
         int result = 0;

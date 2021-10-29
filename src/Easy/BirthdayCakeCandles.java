@@ -36,7 +36,7 @@ class Result7 {
 class BirthdayCakeCandles {
     public static void main(String[] args) throws IOException {
 
-        List<Integer> candles = Arrays.asList(9547948, 8558390, 9999933, 5148263, 5764559, 9999933, 8558390);
+        List<Integer> candles = Arrays.asList(9547948, 8558390, 9999933, 5148263, 5864559, 9999933, 8558390);
 
         Result7.birthdayCakeCandles(candles);
 

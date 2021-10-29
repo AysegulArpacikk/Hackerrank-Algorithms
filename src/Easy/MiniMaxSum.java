@@ -39,7 +39,6 @@ class Result6 {
 
         List<Long> minMaxSum = Arrays.asList(min, max);
         System.out.println(min + " " + max);
-
     }
 
 }

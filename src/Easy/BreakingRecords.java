@@ -43,7 +43,7 @@ class Result12 {
 class BreakingRecords {
     public static void main(String[] args) throws IOException {
 
-        List<Integer> scores = Arrays.asList(3, 4, 21, 36, 10, 28, 35, 5, 24, 42);
+        List<Integer> scores = Arrays.asList(3, 4, 21, 37, 10, 28, 35, 5, 24, 42);
 
         Result12.breakingRecords(scores);
     }

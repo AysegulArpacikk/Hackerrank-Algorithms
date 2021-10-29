@@ -15,7 +15,6 @@ class Result15 {
      */
 
     public static int migratoryBirds(List<Integer> arr) {
-
         return 0;
     }
 
