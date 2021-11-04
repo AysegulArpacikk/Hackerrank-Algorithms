@@ -15,33 +15,19 @@ class Result15 {
      */
 
     public static int migratoryBirds(List<Integer> arr) {
-        int count = 0;
-        int number = 0;
-        int number1 = 0;
-        int temp = 0;
+        int[] count = new int[arr.size() + 1];
+        for (int num : arr) {
+            count[num]++;
+        }
 
-        int [] arr1 = new int[arr.size()];
-
-
-        for(int i=0; i<arr.size(); i++) {
-            for(int j=i+1; j<arr.size(); j++) {
-                if(Objects.equals(arr.get(i), arr.get(j))) {
-                    count++;
-                    number = arr.get(i);
-                    arr1[i] = arr.get(i);
-                    System.out.println(arr.get(i));
-                }
+        int max = 1;
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] > count[max]) {
+                max = i;
             }
         }
 
-        System.out.println();
-        for(int i=0; i<arr.size(); i++) {
-            System.out.print(arr1[i]);
-        }
-
-        System.out.println();
-        System.out.println(count);
-        return count;
+        return max;
     }
 
 }
