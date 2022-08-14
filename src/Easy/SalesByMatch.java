@@ -28,14 +28,12 @@ class Result17 {
         int pairSocks = 0;
 
         for(int i=0; i<n; i++) {
-            int count = 0;
             for(int j=i+1; j<n; j++) {
-                if(ar.get(i).equals(ar.get(j))) {
-                    count++;
-                    if((count % 2) == 1) {
-                        pairSocks++;
-                    }
-
+                if(ar.get(i).equals(ar.get(j)) && ar.get(i)>0 && ar.get(j)>0) {
+                    pairSocks++;
+                    ar.set(j , -1);
+                    j = i+1;
+                    i = i+1;
                 }
             }
         }
