@@ -6,49 +6,35 @@ import java.text.*;
 import java.util.*;
 import java.util.regex.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ElectronicsShop {
 
-    /*
-     * Complete the getMoneySpent function below.
-     */
     static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
-        int sum = 0;
-        List<Integer> arr = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
 
         for (int i=0; i<keyboards.length; i++) {
             for (int j=0; j<drives.length; j++) {
-                sum = keyboards[i] + drives[j];
-                arr.add(sum);
+                list.add(keyboards[i] + drives[j]);
             }
         }
 
-        System.out.println(arr);
+        list.removeIf(num -> num > b);
 
-        int diff = 0;
-        int minDiff = b - arr.get(0);
-
-        for (int i=0; i<arr.size(); i++) {
-            diff = b - arr.get(i);
-            if (minDiff > diff && diff > 0) {
-                minDiff = diff;
-            }
-        }
-
-        System.out.println(b - minDiff);
-
-        if (b - minDiff > b) {
+        if (list.isEmpty()) {
             return -1;
         }
 
-        return b - minDiff;
+        List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
+
+        return sortedList.get(sortedList.size() - 1);
     }
 
     public static void main(String[] args) throws IOException {
-        int[] keyboards = new int[]{ 1, 2, 3 };
-        int[] drives = new int[]{ 4, 5, 6, 7 };
-        getMoneySpent(keyboards, drives, 9);
+        int[] keyboards = new int[]{ 4 };
+        int[] drives = new int[]{ 5 };
+        getMoneySpent(keyboards, drives, 5);
     }
 }
 

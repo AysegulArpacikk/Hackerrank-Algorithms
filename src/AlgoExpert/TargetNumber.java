@@ -1,32 +1,36 @@
 package AlgoExpert;
 
 import com.apple.laf.AquaButtonBorder;
+import com.sun.tools.javac.util.ArrayUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class TargetNumber {
 
-    public static List<Integer> twoNumberSum(Integer []arr, int target) {
+    public static List<List<Integer>> twoNumberSum(Integer []arr, int target) {
         HashSet<Integer> pairSet = new HashSet<>();
-        List<Integer> list = new ArrayList<>();
-        Integer[] resultArr;
+        List<Integer> list;
+        List<List<Integer>> resultList = new ArrayList<>();
 
         for(int i=0; i<arr.length; i++) {
-            int pairNumber = target - arr[i];
+            list = new ArrayList<>();
+            int pairNumber = target - arr[i]; //2
 
             if(pairSet.contains(pairNumber)) {
-                resultArr = new Integer[]{arr[i], pairNumber};
-                Collections.addAll(list, resultArr);
-                System.out.println(list);
+                list.addAll(Arrays.asList(arr[i], pairNumber));
+                resultList.add(list);
             }
 
-            pairSet.add(arr[i]);
+            pairSet.add(arr[i]); //2,5
         }
-        return list;
+        System.out.println(resultList);
+        return resultList;
     }
 
     public static void main(String[] args) {
-        Integer[] arr = new Integer[]{2,8,5,-1,11};
+        Integer[] arr = new Integer[]{2,5,8,-1,11};
         twoNumberSum(arr, 10);
     }
 }
