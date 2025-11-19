@@ -1,4 +1,4 @@
-package Easy;
+package Book;
 
 public class Fibonacci {
 

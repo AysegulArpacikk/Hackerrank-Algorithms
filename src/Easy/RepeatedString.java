@@ -1,10 +1,5 @@
 package Easy;
 
-
-import com.sun.deploy.util.StringUtils;
-
-import java.util.Arrays;
-
 public class RepeatedString {
 
     public static long repeatedString(String s, long n) {
