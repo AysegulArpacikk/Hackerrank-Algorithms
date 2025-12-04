@@ -26,5 +26,8 @@ public class VectorNumber {
         }
 
         System.out.println("En küçük sayı = " + min);
+
+        String name = "Galatasaray";
+        System.out.println(name.replace("a", "e"));
     }
 }
