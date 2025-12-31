@@ -6,7 +6,6 @@ public class MatrixMultiply {
         int A[][] = new int[][]{{1,2}, {1,2}, {1,2}};
         int B[][] = new int[][]{{1,2,3}, {1,2,3}, {1,2,3}};
         int C[][] = new int[3][3];
-        int D[][] = new int[3][3];
 
         for(int i=0; i<3; i++) {
             for(int j=0; j<3; j++) {
