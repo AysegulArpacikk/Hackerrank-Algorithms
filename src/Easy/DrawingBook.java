@@ -1,7 +1,5 @@
 package Easy;
 
-import apple.laf.JRSUIUtils;
-
 import java.io.*;
 import java.math.*;
 import java.security.*;
